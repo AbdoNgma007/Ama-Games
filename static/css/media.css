@@ -1,0 +1,170 @@
+@media (max-width: 1400px) {
+
+    /* games */
+    .games .card-game {
+        width: 250px;
+        height: 350px;
+    }
+    .games .card-game .game-details {
+        bottom: -300px;
+    }
+    /* ads */
+    .ads .ads-game {
+        width: 316px;
+        height: 440px;
+    }
+    .ads .ads-details p {
+        width: 800px;
+    }
+    /* authors */
+    .authors .author-content .author-card .author-image {
+        width: 200px;
+        height: 200px;
+    }
+    .authors .author-content .author-card h1 {
+        font-size: 20px;
+    }
+    .authors .author-content .author-card h3 {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 1150px) {
+    /* search engine  */
+    .main .search-engine {
+        width: 800px;
+    }
+    /* games */
+    .games {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    /* ads */
+    .ads .ads-details p {
+        width: 500px;
+    }
+
+    /* footer */
+    footer .content .part h1 {
+        font-size: 20px;
+    }
+    footer .content .part h3,
+    footer .content .part a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 900px) {
+    /* search engine  */
+    .main .search-engine {
+        width: 400px;
+    }
+    .main .search-engine a {
+        padding: 0 35px;
+    }
+    /* games */
+    .games {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    /* ads */
+    .ads {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .ads .ads-game {
+        width: 180px;
+        height: 250px;
+    }
+    .ads .ads-details {
+        text-align: center;
+        margin: 0;
+    }
+    .ads .ads-details h2 {
+        margin-top: 10px;
+    }
+    .ads .ads-details p {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .ads .ads-details .ads-info {
+        justify-content: center;
+        align-items: center;
+    }
+    .ads .ads-details .ads-info .info-downloads img,
+    .ads .ads-details .ads-info .info-rating img {
+        width: 25px;
+    }
+    .ads .ads-details .ads-info .info-downloads span,
+    .ads .ads-details .ads-info .info-rating span {
+        font-size: 15px;
+        font-weight: bold;
+        margin-top: 5px;
+    }
+    .ads .ads-details .btn {
+        font-size: 15px;
+        padding: 5px 25px;
+        border-radius: 30px;
+    }
+     /* authors */
+     .authors .author-content .author-card .author-image {
+        width: 150px;
+        height: 150px;
+    }
+    .authors .author-content .author-card h1 {
+        font-size: 20px;
+    }
+    .authors .author-content .author-card h3 {
+        font-size: 15px;
+    }
+    /* signup */
+    .signup form .button-group,
+    .signin form .button-group,
+    .profile form .button-group
+    {
+        grid-column: 1/2;
+    }
+    /* profile */
+    .profile form,
+    .signin form,
+    .signup form{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .profile form button,
+    .signup form button,
+    .signin form button{
+        grid-column: 1/2;
+    }
+}
+
+@media (max-width: 800px) {
+    /* footer */
+    footer {
+        height: 100%;
+        margin-top: 500px;
+    }
+    footer .content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer .content .part {
+        margin-bottom: 50px;
+    }
+    /* authors */
+    .authors .author-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .authors .author-content .author-card {
+        margin-bottom: 50px;
+    }
+    /* gallery */
+    .game .gallery {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game .gallery a {
+        margin: 10px 0;
+    }
+}

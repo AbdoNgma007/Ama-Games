@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | AmaGames</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/media.css' %}">
+            <!-- lightgallery plugins -->
+        <link type="text/css" rel="stylesheet" href="{% static 'css/lg-zoom.css' %}" />
+        <link type="text/css" rel="stylesheet" href="{% static 'css/lg-thumbnail.css' %}" />
+        <!-- OR -->
+        <link type="text/css" rel="stylesheet" href="{% static 'css/lightgallery-bundle.css' %}" />
+    </head>
+    <body>
+        {% include 'parts/_navbar.html' %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% include 'parts/_footer.html' %}
+
+        <script src="{% static 'js/lightgallery.umd.js' %}"></script>
+        <!-- Or use the minified version -->
+        <script src="{% static 'js/lightgallery.min.js' %}"></script>
+
+        <!-- lightgallery plugins -->
+        <script src="{% static 'js/plugins/thumbnail/lg-thumbnail.umd.js' %}"></script>
+        <script src="{% static 'js/plugins/zoom/lg-zoom.umd.js' %}"></script>
+        <script src="{% static 'js/main.js' %}"></script>
+
+        <script type="text/javascript">
+            lightGallery(document.getElementById('lightgallery'), {
+                plugins: [lgZoom, lgThumbnail],
+                licenseKey: 'your_license_key',
+                speed: 500,
+                // ... other settings
+            });
+        </script>
+
+    </body>
+</html>

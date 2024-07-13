@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block content%}
+    <!-- welcome -->
+    <div class="picture-signup-welcome">
+        <h1>welcome to AmaGames</h1>
+    </div>
+    <!-- welcome -->
+
+    <!-- signup -->
+    <section class="signup container">
+        <form action="{% url 'reg' %}" method="post">
+            {% csrf_token %}
+            <div class="field">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+            </div>
+            <div class="field">
+                <label for="lname">Lastname Name</label>
+                <input type="text" id="lname" name="lname" required>
+            </div>
+            <div class="field">
+                <label for="birthday">Birthdat</label>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+            <div class="field">
+                <label for="nationality">Nationality</label>
+                <input type="text" id="nationality" name="nationality" required>
+            </div>
+            <div class="field">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="field">
+                <label for="password">password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="button-group">
+                <button name="btnregister">Register</button>
+                <a href="{% url 'signin' %}">Sign In</a>
+            </div>
+        </form>
+    </section>
+    <!-- signup -->
+{%endblock%}

@@ -1,0 +1,18 @@
+<!-- start navbar -->
+<nav>
+    <ul>
+        <li><a href="{% url 'home' %}" {%if request.path == '/'%} class="active" {%endif%}>Home</a></li>
+        <li><a href="{% url 'games' %}" {%if 'games/' in request.path%} class="active" {%endif%}>Games</a></li>
+        <li><a href="{% url 'communities' %}" {%if 'community/' in request.path%} class="active" {%endif%}>Community</a></li>
+        
+            {% if request.user.is_authenticated %}
+            <li><a href="{% url 'profile' %}" {%if "accounts/" in request.path%} class="active" {%endif%}>Profile</a></li>
+            {%else%}
+            <li><a href="{% url 'signin' %}" {%if "accounts/" in request.path%} class="active" {%endif%}>Join Us</a></li>
+            {%endif%}
+            
+        
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+<!-- end navbar -->
